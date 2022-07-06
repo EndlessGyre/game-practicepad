@@ -9,14 +9,14 @@ class GameScene extends Phaser.Scene {
 
 
     preload() {           
-      this.load.image('bob', '../img/Bob+front.png');
-      this.load.image('dude', '../img/little_dude.png');
-      this.load.image('red-room', '../img/reddish_room.png', {
+      this.load.image('bob', './img/Bob+front.png');
+      this.load.image('dude', './img/little_dude.png');
+      this.load.image('red-room', './img/reddish_room.png', {
         width: 800, height: 600
       });
-      this.load.image('platform', '../img/truss-platform.png');
-      this.load.image('flower', '../img/flower.png');
-      this.load.image('mushy', '../img/mushy.png');
+      this.load.image('platform', './img/truss-platform.png');
+      this.load.image('flower', './img/flower.png');
+      this.load.image('mushy', './img/mushy.png');
     }// end preload
   
     create() {
