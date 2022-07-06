@@ -39,6 +39,8 @@ class GameScene extends Phaser.Scene {
       gameState.enemy.setCollideWorldBounds(true);
       this.physics.add.collider(gameState.enemy, platforms);
 
+      this.physics.world.setBounds(0, 0,  config.width, config.height, true, true, true, false);
+
       gameState.cursors = this.input.keyboard.createCursorKeys();
         
     }
