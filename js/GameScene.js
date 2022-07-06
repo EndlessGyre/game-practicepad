@@ -17,7 +17,7 @@ class GameScene extends Phaser.Scene {
       this.load.image('platform', '../img/truss-platform.png');
       this.load.image('flower', '../img/flower.png');
       this.load.image('mushy', '../img/mushy.png');
-    }
+    }// end preload
   
     create() {
       // C
@@ -43,9 +43,10 @@ class GameScene extends Phaser.Scene {
 
       gameState.cursors = this.input.keyboard.createCursorKeys();
         
-    }
+    }// end create
 
     update(){
+      // Key input events
       if(gameState.cursors.right.isDown){
         gameState.player.setVelocityX(50);
       }else if(gameState.cursors.left.isDown){
@@ -59,7 +60,7 @@ class GameScene extends Phaser.Scene {
       }else{
         gameState.player.setVelocityY(0);
       }
-    }
+    }// end update
     
 
 
