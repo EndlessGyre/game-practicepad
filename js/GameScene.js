@@ -32,8 +32,9 @@ class GameScene extends Phaser.Scene {
       // Create the sprite object, animation, and play the animation: 
       
       gameState.player = this.physics.add.sprite(100, 100, 'dude');
-      gameState.player.setCollideWorldBounds(true);
+      //gameState.player.setCollideWorldBounds(true);
       this.physics.add.collider(gameState.player, platforms);
+      
 
       gameState.enemy = this.physics.add.sprite(Math.random() * 500, 100, 'mushy');
       gameState.enemy.setCollideWorldBounds(true);
@@ -60,6 +61,9 @@ class GameScene extends Phaser.Scene {
       }else{
         gameState.player.setVelocityY(0);
       }
+
+      this.physics.world.wrap(gameState.player);
+      
     }// end update
     
 

@@ -1,6 +1,6 @@
 const config = {
-    width: 512,
-    height: 512,
+    width: 400,
+    height: 400,
     backgroundColor: '#333333',
     type: Phaser.AUTO,
     parent: 'platform',
@@ -12,7 +12,7 @@ const config = {
         default: 'arcade',
         arcade: {
             debug: false,
-            gravity: {y: 5000}
+            gravity: {y: 50}
         }
     }    
 }
