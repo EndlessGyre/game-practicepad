@@ -21,23 +21,23 @@ class GameScene extends Phaser.Scene {
   
     create() {
       // C
-      this.add.sprite(400, 300, 'red-room');
+      //this.add.sprite(400, 300, 'red-room');
       const platforms = this.physics.add.staticGroup();
-      platforms.create(64, 200, 'platform');
-      platforms.create(184, 200, 'platform');
-      platforms.create(302, 200, 'platform');
-      platforms.create(256, 400, 'platform');
-      platforms.create(400, 400, 'platform');
+      platforms.create(128, 224, 'platform');
+      // platforms.create(184, 100, 'platform');
+      // platforms.create(302, 200, 'platform');
+      // platforms.create(256, 400, 'platform');
+      // platforms.create(400, 400, 'platform');
   
       // Create the sprite object, animation, and play the animation: 
       
       gameState.player = this.physics.add.sprite(100, 100, 'jammer');
-      gameState.player.setCollideWorldBounds(true);
+      //gameState.player.setCollideWorldBounds(true);
       this.physics.add.collider(gameState.player, platforms);
       
 
-      gameState.enemy = this.physics.add.sprite(Math.random() * 500, 100, 'mushy');
-      gameState.enemy.setCollideWorldBounds(true);
+      gameState.enemy = this.physics.add.sprite(Math.random() * 256, 100, 'mushy');
+      //gameState.enemy.setCollideWorldBounds(true);
       this.physics.add.collider(gameState.enemy, platforms);
       this.physics.add.collider(gameState.player, gameState.enemy);
 
@@ -64,6 +64,7 @@ class GameScene extends Phaser.Scene {
       }
 
       this.physics.world.wrap(gameState.player);
+      this.physics.world.wrap(gameState.enemy);
       
     }// end update
     

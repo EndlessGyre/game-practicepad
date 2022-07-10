@@ -1,7 +1,7 @@
 const config = {
     width: 256,
     height: 240,
-    backgroundColor: '#333333',
+    backgroundColor: '#ff8370',
     type: Phaser.AUTO,
     parent: 'platform',
     scene: [StartScene, GameScene],
