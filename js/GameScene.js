@@ -10,7 +10,7 @@ class GameScene extends Phaser.Scene {
 
     preload() {           
       this.load.image('bob', './img/Bob+front.png');
-      this.load.image('dude', './img/little_dude.png');
+      this.load.image('jammer', './img/jammer-01.png');
       this.load.image('red-room', './img/reddish_room.png' 
       //{width: 800, height: 600}
       );
@@ -31,7 +31,7 @@ class GameScene extends Phaser.Scene {
   
       // Create the sprite object, animation, and play the animation: 
       
-      gameState.player = this.physics.add.sprite(100, 100, 'dude');
+      gameState.player = this.physics.add.sprite(100, 100, 'jammer');
       gameState.player.setCollideWorldBounds(true);
       this.physics.add.collider(gameState.player, platforms);
       
