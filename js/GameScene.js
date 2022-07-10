@@ -14,7 +14,7 @@ class GameScene extends Phaser.Scene {
       this.load.image('red-room', './img/reddish_room.png' 
       //{width: 800, height: 600}
       );
-      this.load.image('platform', './img/truss-platform.png');
+      this.load.image('platform', './img/vapor-ground.png');
       this.load.image('flower', './img/flower.png');
       this.load.image('mushy', './img/mushy.png');
     }// end preload
@@ -51,8 +51,10 @@ class GameScene extends Phaser.Scene {
       // Key input events
       if(gameState.cursors.right.isDown){
         gameState.player.setVelocityX(50);
+        gameState.player.flipX = true;
       }else if(gameState.cursors.left.isDown){
         gameState.player.setVelocityX(-50);
+        gameState.player.flipX = false;
       }else{
         gameState.player.setVelocityX(0);
       }

@@ -6,7 +6,7 @@ const config = {
     parent: 'platform',
     scene: [StartScene, GameScene],
     scale: {
-        zoom: 2
+        zoom: 2.5
     },
     physics: {
         default: 'arcade',
